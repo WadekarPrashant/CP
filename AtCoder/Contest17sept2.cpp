@@ -1,3 +1,5 @@
+//At coder contest 17sept 5:30pm.Problem2
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -9,6 +11,7 @@ int main(){
 		
 	int tc;
 	cin>>tc;
+
 	
 	while(tc--){
 		int n;
