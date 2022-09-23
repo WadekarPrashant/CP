@@ -1,5 +1,12 @@
 #include<iostream>
+#include<bits/stdc++.h>
+#include<vector>
 using namespace std;
+
+	// #ifndef first
+	// 	freopen("input.txt", "r", stdin);
+	// 	freopen("output.txt", "w", stdout);
+	// #endif
 
 int main(){
     int testcase;
@@ -8,12 +15,9 @@ int main(){
 	while(testcase--)
 {
 		
-int NumerA;
-int NumerB;
-int integer;
-cin>>NumerA;
-cin>>NumerB;
-cin>>integer;
+
+		int NumerA, NumerB, integer;
+		cin>>NumerA>>NumerB>>integer;
 		
 if(NumerA <= NumerB)
 {

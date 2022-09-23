@@ -1,6 +1,13 @@
 #include<iostream>
+#include<bits/stdc++.h>
+#include<vector>
 
 using namespace std;
+
+	// #ifndef first
+	// 	freopen("input.txt", "r", stdin);
+	// 	freopen("output.txt", "w", stdout);
+	// #endif
 
 int main(){
     // cout<<"Take test case as input"<<endl;
