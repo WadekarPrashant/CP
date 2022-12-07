@@ -2,7 +2,7 @@
 #include<sys/types.h>
 #include<unistd.h>
 #include<stdlib.h>
-// #include<sys/wait.h>
+#include<sys/wait.h>
  
 int n[100],i;
 pid_t id;
