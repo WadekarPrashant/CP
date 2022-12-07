@@ -37,7 +37,7 @@ void display(){
     {
         printf("Queue: \n");
         for (int i = front; i < rear; i++)
-            printf("%d ", arr_queue[i]);
+            printf("%d ", arr_queue[i]); 
         printf("\n");
     }
 } 
