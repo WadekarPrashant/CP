@@ -72,7 +72,7 @@ int main()
             printf("\n--------------------------------------");
             printf("\nLENGTH OF LINKED LIST\n");
             int l = length(head);
-            printf("length of link list:%d",l);
+            printf("length of link list:%d", l);
             break;
         default:
             printf("\nEnter the valid choice");
@@ -92,8 +92,8 @@ void create(struct node *head)
     {
         curr = (struct node *)malloc(sizeof(struct node));
         printf("Enter the PRN and Name\n");
-    	scanf("%d%s", &curr->value,curr->name);
-        
+        scanf("%d%s", &curr->value, curr->name);
+
         curr->next = NULL;
         temp->next = curr;
         temp = curr;
@@ -102,38 +102,40 @@ void create(struct node *head)
     }
     printf("\n--------------------------------------\n\n");
 }
-void display(struct node* head){
-		struct node* curr;
-		if(head->next==NULL)
-		{
-			printf("list is empty");
-			}
+void display(struct node *head)
+{
+    struct node *curr;
+    if (head->next == NULL)
+    {
+        printf("list is empty");
+    }
 
-		else
-		{
-			curr=head->next;
+    else
+    {
+        curr = head->next;
 
-			printf("PRN\t\t\tNAME\t\t\t Designation\n");
+        printf("PRN\t\t\tNAME\t\t\t Designation\n");
 
-			while(curr!=NULL)
-			{
-				if(curr==head->next)
-							{
-							printf("%d\t\t%s\t\t President\n",curr->value,curr->name);
-								}
+        while (curr != NULL)
+        {
+            if (curr == head->next)
+            {
+                printf("%d\t\t%s\t\t President\n", curr->value, curr->name);
+            }
 
-				else if(curr->next==NULL)
-		{
-					printf("%d\t\t%s\t\tSecretary\n",curr->value,curr->name);
-				}
-				else
-				{
-				printf("%d\t\t%s\t\t Member\n",curr->value,curr->name);}
-				curr =curr->next;
-			}
-		}printf("\n--------------------------------------\n\n");
-	}
-    
+            else if (curr->next == NULL)
+            {
+                printf("%d\t\t%s\t\tSecretary\n", curr->value, curr->name);
+            }
+            else
+            {
+                printf("%d\t\t%s\t\t Member\n", curr->value, curr->name);
+            }
+            curr = curr->next;
+        }
+    }
+    printf("\n--------------------------------------\n\n");
+}
 
 void insert(struct node *head)
 {
@@ -146,7 +148,7 @@ void insert(struct node *head)
     scanf("%d", &pos);
     printf("Enter the PRN and NAME: ");
     scanf("%d%s", &nnode->value, nnode->name);
-    len=length(head);
+    len = length(head);
     if (pos > len + 1)
     {
         printf("\n\nData can`t be inserted");
@@ -298,13 +300,14 @@ int length(struct node *head)
 {
     int i = 0;
     struct node *curr;
-	if(head->next!=NULL){
-		curr=head->next;
-	}
-	while(curr!=NULL){
-		i++;
-		curr=curr->next;
-	}
-	return 1;
+    if (head->next != NULL)
+    {
+        curr = head->next;
+    }
+    while (curr != NULL)
+    {
+        i++;
+        curr = curr->next;
+    }
+    return 1;
 }
-  
