@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* Add CSS styles here */
+    body {
+      font-family: "Open Sans", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Use background image */
+    body::before {
+      content: "";
+      background-image: url("bg.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    /* Add a gradient overlay */
+    body::after {
+      content: "";
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    /* Create a centered container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* Use a large and bold font for the heading */
+    h1 {
+      font-size: 4em;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 100px;
+      color: #fff;
+    }
+    /* Use a smaller font for the subheading */
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 50px;
+      color: #fff;
+    }
+    /* Use a button style */
+    .cta {
+      display: inline-block;
+      padding: 15px 40px;
+      margin-top: 50px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #fff;
+      background-color: #333;
+      border-radius: 40px;
+    }
+    /* Add hover effect to the button */
+    .cta:hover {
+      background-color: #444;
+    }
+    /* Use a grid layout for the portfolio items */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      margin-top: 100px;
+    }
+    /* Use a card style for the portfolio items */
+    .portfolio__item {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Add hover effect to the portfolio items */
+    .portfolio__item:hover {
+      transform: scale(1.05);
+    }
+    /* Use a contact form style */
+    form {
+      margin-top: 100px;
+    }
+    form input[type="text"],
+    form textarea {
+      display: block
+
+  </style>
+</head>
+
+  </style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna non faucibus congue, urna magna blandit ipsum, id bibendum augue dolor euismod leo.</p>
+      </section>
+      <section id="portfolio">
+        <h1>My Portfolio</h1>
+        <ul>
+          <li><a href="#">Portfolio Piece 1</a></li>
+          <li><a href="#">Portfolio Piece 2</a></li>
+          <li><a href="#">Portfolio Piece 3</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h1>Contact Me</h1>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea><br>
+          <input type="submit" value="Send">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+  <script>
+    <body>
+  <!-- HTML content -->
+  <script>
+    // Add JavaScript here
+    function sendForm() {
+      alert("Thank you for your message!");
+    }
+  </script>
+</body>
+
+  </script>
+</body>
+</html>
