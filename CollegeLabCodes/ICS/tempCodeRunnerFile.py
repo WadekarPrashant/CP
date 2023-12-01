@@ -1,0 +1,2 @@
+
+    b = bytearray(f)
