@@ -15,7 +15,16 @@ int main()
     {
         int n;
         cin >> n;
-        cout << ceil(n / 2) << " " << ceil(n / 3) << endl;
+        if (n <= 2)
+        {
+            cout << "1"
+                 << " "
+                 << "1";
+        }
+        else
+        {
+            cout << ceil(n / 2.00) << " " << ceil(n / 3.0) << endl;
+        }
     }
 
     return 0;
