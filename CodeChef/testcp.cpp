@@ -1,56 +1,71 @@
 #include <bits/stdc++.h>
-#include <vector>
-
-#define ll long long
-#define fr(i, n) for (ll i = 0; i < n; i++)
 using namespace std;
+// STAY CALM
 
-ll calcShift(ll diff)
-{
-    ll div = 3;
-    ll bdiff = 52;
-    ll cdiff = 26;
-    ll zero = 0;
-    ll one = 1;
-    ll rem = diff % div;
+#define int long long int
+#define vi vector<int>
+#define read(a)       \
+    for (auto &i : a) \
+    cin >> i
+// #define mod 998244353
+#define mod 1000000007
 
-    if (rem == zero)
-        return diff / div;
-    else if (rem == one)
-        return (diff + cdiff) / div;
-    else
-        return (diff + bdiff) / div;
-}
-ll calcDiff(char s, char ss)
+signed main()
 {
-    ll diff = ss - s;
-    ll cdiff = 26;
-    if (diff < 0)
-        diff += cdiff;
-    return diff;
-}
-
-int main()
-{
-    ll testc;
-    cin >> testc;
-    while (testc--)
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t = 1;
+    cin >> t;
+    // sieve();
+    while (t--)
     {
-        ll n;
+        int n;
         cin >> n;
-        string s, ss;
-        cin >> s >> ss;
-        vector<ll> a(n, 0);
-        for (ll i = 0; i < n; i++)
+        // 101
+        int cnt = 0;
+        int pos = 0;
+        for (int i = 31; i >= 0; i--)
         {
-            ll diff = calcDiff(s[i], ss[i]);
-            a[i] = calcShift(diff);
+            if (n & (1LL << i))
+            {
+                if (pos == 0)
+                {
+                    pos = i;
+                }
+                if (cnt == 0 or cnt == 2)
+                {
+                    cnt++;
+                }
+            }
+            else
+            {
+                if (cnt == 1)
+                {
+                    cnt = 2;
+                }
+            }
         }
-        fr(i, n)
+        if (cnt != 3)
         {
-            cout << a[i] << " ";
+            cout << 0 << endl;
+            continue;
         }
-        cout << endl;
+        // 111100000
+        int curnum = 0;
+        int ans = 1e18;
+        // cout<<pos<<endl;
+        for (int i = pos; i >= 0; i--)
+        {
+            curnum = curnum + pow(2, i);
+            // cout<<curnum<<endl;
+            if (curnum < n)
+            {
+                continue;
+            }
+            ans = min(ans, curnum - n);
+        }
+        cout << ans << endl;
     }
+
     return 0;
 }
