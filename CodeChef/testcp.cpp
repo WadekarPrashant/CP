@@ -1,71 +1,43 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
-// STAY CALM
 
-#define int long long int
-#define vi vector<int>
-#define read(a)       \
-    for (auto &i : a) \
-    cin >> i
-// #define mod 998244353
-#define mod 1000000007
-
-signed main()
+int getNumPairs(const vector<int> &arr, int l, int r)
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t = 1;
-    cin >> t;
-    // sieve();
-    while (t--)
+    int count = 0;
+    int n = arr.size();
+
+    for (int i = 0; i < n - 1; i++)
     {
-        int n;
-        cin >> n;
-        // 101
-        int cnt = 0;
-        int pos = 0;
-        for (int i = 31; i >= 0; i--)
+        for (int j = i + 1; j < n; j++)
         {
-            if (n & (1LL << i))
+            int sum = arr[i] + arr[j];
+            if (sum >= l && sum <= r)
             {
-                if (pos == 0)
-                {
-                    pos = i;
-                }
-                if (cnt == 0 or cnt == 2)
-                {
-                    cnt++;
-                }
-            }
-            else
-            {
-                if (cnt == 1)
-                {
-                    cnt = 2;
-                }
+                count++;
             }
         }
-        if (cnt != 3)
-        {
-            cout << 0 << endl;
-            continue;
-        }
-        // 111100000
-        int curnum = 0;
-        int ans = 1e18;
-        // cout<<pos<<endl;
-        for (int i = pos; i >= 0; i--)
-        {
-            curnum = curnum + pow(2, i);
-            // cout<<curnum<<endl;
-            if (curnum < n)
-            {
-                continue;
-            }
-            ans = min(ans, curnum - n);
-        }
-        cout << ans << endl;
     }
+
+    return count;
+}
+
+int main()
+{
+    int n, l, r;
+    cin >> n;
+
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    cin >> l >> r;
+
+    int result = getNumPairs(arr, l, r);
+    cout << result << endl;
 
     return 0;
 }
